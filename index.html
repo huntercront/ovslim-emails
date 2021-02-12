@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Письма OVSLIM</title>
+    <style>
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding-top: 3rem;
+        }
+        
+        .iframe-col {
+            max-width: 50%;
+            flex: 0 0 50%;
+            width: 100%;
+            padding: 0 10px;
+            box-sizing: border-box;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        .iframe-col iframe {
+            width: 100%;
+            height: 300px;
+        }
+        
+        @media(max-width:1024px) {
+            .iframe-col {
+                max-width: 100%;
+                flex: 0 0 100%;
+                width: 100%;
+            }
+        }
+        
+        .iframe-link {
+            position: absolute;
+            width: calc(60% - 40px);
+            line-height: 50px;
+            background: #000;
+            color: #fff;
+            left: 50%;
+            transform: translate(-50%, 0);
+            bottom: 10px;
+            text-align: center;
+            opacity: 0;
+            transition: 200ms ease-in;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+        }
+        
+        .iframe-col:hover .iframe-link {
+            opacity: 1;
+        }
+        
+        .email-name {
+            font-family: 'Oswald';
+            font-size: 22px;
+            color: #2a2a2a;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="iframe-col">
+            <div class="email-name">Покупка курса</div>
+            <iframe src="./course-buy.html" frameborder="0"></iframe>
+            <a href="./course-buy.html" class="iframe-link">Посмотреть шаблон</a>
+        </div>
+        <div class="iframe-col">
+            <div class="email-name">Данные для входа</div>
+            <iframe src="./login-info.html" frameborder="0"></iframe>
+            <a href="./login-info.html" class="iframe-link">Посмотреть шаблон</a>
+        </div>
+        <div class="iframe-col">
+            <div class="email-name">Подписка закончилась</div>
+            <iframe src="./mail-01.html" frameborder="0"></iframe>
+            <a href="./mail-01.html" class="iframe-link">Посмотреть шаблон</a>
+        </div>
+        <div class="iframe-col">
+            <div class="email-name">Пробный период</div>
+            <iframe src="./mail-02.html" frameborder="0"></iframe>
+            <a href="./mail-02.html" class="iframe-link">Посмотреть шаблон</a>
+        </div>
+    </div>
+</body>
+
+</html>
